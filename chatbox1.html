@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+	<title>Whatsapp UI</title>
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+    *{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+.container1 {
+	width:100%;
+	height:650px;
+	margin-top:-10px;
+	margin-left:0px;
+	top: -10px;
+	/* margin-top:-10px; */
+}
+.chat {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	background: #f1f0e8;
+	top:0px;
+}
+.chat-header {
+	display: flex;
+	cursor: pointer;
+}
+.profile {
+	width: 100%;
+	background:white;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	padding: 0px 10px;
+	position: relative;
+}
+.profile .pp {
+	width: 50px;
+	display: inline-block;
+	border-radius: 50%;
+	margin-left: 32px;
+}
+.profile .arrow {
+	display: inline-block;
+	width: 30px;
+	position: absolute;
+	top: 19px;
+	cursor: pointer;
+    background: #036055;
+}
+.profile h2 {
+	display: inline-block;
+	line-height: 60px;
+	vertical-align: bottom;
+	color: #fff;
+	font-size: 20px;
+}
+.profile span {
+	color: #ccc;
+	position: absolute;
+	top: 42px;
+	left: 100px;
+	font-size: 14px;
+}
+.right .icon {
+	display: inline-block;
+	width: 25px;
+	margin-left: 10px;
+}
+.profile .left {
+	flex: 1;
+}
+
+.chat-box {
+	background: url('./whattsapp.jpeg');
+	background-attachment: fixed;
+	padding-left: 20px;
+	overflow-y: scroll;
+	flex: 1;
+}
+.chat-box .img_chat {
+	width: 280px;
+}
+
+.chat-r {
+	display: flex;
+}
+.chat-r .sp {
+	flex: 1;
+}
+
+.chat-l {
+	display: flex;
+}
+.chat-l .sp {
+	flex: 1;
+}
+
+.chat-box .mess {
+	max-width: 300px;
+	background: #F7FCF6;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 20px 0px;
+	cursor: pointer;
+}
+.chat-box .mess p {
+	word-break: break-all;
+	font-size: 18px;
+}
+.chat-box .mess-r {
+    background: #E2FFC7;
+}
+.chat-box .emoji {
+	width: 20px;
+}
+.chat-box .check {
+	float: right;
+}
+.chat-box .check img {
+	width: 20px;
+}
+.chat-box .check span {
+	color: #888;
+	font-size: 12px;
+	font-weight: 700px;
+}
+
+*::-webkit-scrollbar {
+	width: 5px;
+}
+*::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+*::-webkit-scrollbar-thumb {
+	background: #aaa;
+}
+*::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+.chat-footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 60px;
+	position: relative;
+	cursor: pointer;
+	width:100%;
+}
+.chat-footer textarea {
+	display: block;
+	flex: 1;
+	width: 100%;
+	height: 50px;
+	border-radius: 60px;
+	margin: 5px;
+	padding: 10px;
+	outline: none;
+	font-size: 19px;
+	padding-left: 40px;
+	padding-right: 90px;
+	border: 2px solid #ccc;
+	color: #555;
+	resize: none;
+}
+.chat-footer .mic {
+	display: block;
+	width: 55px;
+	height: 55px;
+	margin-left: -30px;
+}
+
+.chat-footer .emo{
+	display: block;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	left: 10px;
+	top: 12px;
+}
+.chat-footer .icons {
+	position:relative;
+	right:60px;
+	top:px;
+}
+.chat-footer .icons img{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin-left: 5px;
+}
+.sticky{
+	position: -webkit-sticky;
+	position: sticky;
+    border: 1px solid;
+    height: 25px;
+    width: 70px;
+    border-radius:10px;
+    background-color:white;
+    top:0px;
+    right:400px;
+    color:#555 ;
+    padding-left: 0px;
+    }
+	
+</style>
+<head>
+</head>
+<body>
+	<div class="container1">
+		<div class="chat">
+			<div class="chat-header">
+				<div class="profile">
+					<div class="left">
+						<img src="./arrow.png" class="arrow">
+						<img src="./wallpaper.jpeg" class="pp">
+						<h2 style="color:black;">Udaya</h2>
+						<span style="color:#555">online</span>
+					</div>
+					<div class="right">
+						<img src="./vedio.png" class="icon">
+						<img src="./call.png" class="icon">
+						<img src="./dots.png" class="icon">
+					</div>
+				</div>
+			</div>
+			<div class="chat-box">
+				<div class="chat-r">
+					<div class="sp"></div>
+					<div class="sticky" style="width: 80px;"><b>Yesterday</b></div>
+					<div class="mess mess-r">
+						<p>
+                            Hi Gd mrng
+						</p>
+						<div class="check">
+							<span>6:00am</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+				<div class="chat-l">
+					<div class="mess">
+						<p>
+                            Hi gd mrng 
+						</p>
+						<div class="check">
+							<span>7:00am</span>
+						</div>
+					</div>
+					<div class="sp"></div>
+				</div>
+
+				<div class="chat-r">
+					<div class="sp"></div>
+					<div class="mess mess-r">
+						<p>
+                           How are you doing?
+						</p>
+						<div class="check">
+							<span>7:15 am</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+				<div class="chat-l">
+					<div class="mess">
+					    <p>I'm doing good. How about you?</p>
+						<div class="check">
+							<span>7:16 am</span>
+						</div>
+					</div>
+					<div class="sp"></div>
+				</div>
+				<div class="chat-r">
+					<div class="sp"></div>
+					<div class="mess mess-r">
+						<p>
+							I am doing well
+						</p>
+						<div class="check">
+							<span>7:20am</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+				<div class="chat-l">
+					<div class="mess">
+						<p>
+                            Did you had your breakfast?
+						</p>
+						<div class="check">
+							<span>7:25am</span>
+						</div>
+					</div>
+					<div class="sp"></div>
+				</div>
+					<div class="chat-r">
+					<div class="sp">
+				</div>
+					<div class="mess mess-r">
+						<p>Yaa! Just Now. Your's?
+						<div class="check">
+							<span>7:29am</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+				<div class="chat-r">
+					<div class="sp"></div>
+					<div class="mess mess-r">
+						<p>I will chat with you later</p>
+						<div class="check">
+							<span>7:30</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+				<div class="chat-r">
+					<div class="sp"></div>
+					<div class="mess mess-r">
+						<p>Bye</p>
+						<div class="check">
+							<span>7:30</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+				<div class="chat-l">
+					<div class="mess">
+						<p>
+                           KK Bye 
+						</p>
+						<div class="check">
+							<span>7:35am</span>
+						</div>
+					</div>
+					<div class="sp"></div>
+				</div>
+				<div class="chat-r">
+					<div class="sp"></div>
+					<div class="mess mess-r">
+						<p>
+							<img src="./heart.png"  class="emoji">
+						</p>
+						<div class="check">
+							<span>7:40am</span>
+							<img src="./ticks.jpeg">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="chat-footer">
+				<img src="./emoli.png" class="emo">
+				<textarea placeholder="Type a message"></textarea>
+				<div class="icons">
+					<ion-icon class="s1" name="attach-outline"></ion-icon>
+       				<ion-icon class="s2" name="camera-outline"></ion-icon>
+					
+				</div>
+				<img src="./mic.png" class="mic">
+			</div>
+			<div class ="keyboard">
+				<img src="./keyboard.jpg" style="width:100%; height: 150px;">
+		</div>
+	</div>
+
+	</body>
